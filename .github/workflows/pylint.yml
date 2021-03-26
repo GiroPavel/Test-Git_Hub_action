@@ -18,5 +18,5 @@ jobs:
         python -m pip install --upgrade pip
         pip install pylint
     - name: Analysing the code with pylint
-      run: |
-        pylint `ls -R|grep .py$|xargs`
+      run: pylint main.py app.py views/product.py views/__init__.py tests/test_views/test_product.py
+
